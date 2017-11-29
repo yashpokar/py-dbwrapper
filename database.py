@@ -94,3 +94,5 @@ class DB(object):
         self.cur = self.conn.cursor()
         self.cur.execute(sql)
         return self
+
+print DB('example.db').table('users').where('name', 'Jhon Doe').get()
