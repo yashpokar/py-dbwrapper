@@ -16,20 +16,20 @@ DB('example.db').table('users').insert_many([
 	('Alexender', 'alexender@domain.com', '12345545'),
 ])
 ```
-where your database name is ***example.db*** and the table name is ***users***
+where your database name is **example.db** and the table name is **users**
 ## Note* sql file for table should be provided in the same directory
 
 Now, to retrive data from database with name filtering
 ```
 DB('example.db').table('users').where('name', 'Jhon Doe').get()
 ```
-It is equivalent to "SELECT * FROM users WHERE name = 'Jhon Doe'"
+It is equivalent to ```"SELECT * FROM users WHERE name = 'Jhon Doe'"```
 
 - To retrive all the records
 ```
 DB('example.db').table('users').all()
 ```
-Which is equivalent to "SELECT * FROM users"
+Which is equivalent to ```"SELECT * FROM users"```
 
 Well this version of Database wrapper isn't compatible to prevent **sql injection**
 But still it works ideally. The sql injection prevented version will be available
